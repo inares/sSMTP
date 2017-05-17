@@ -1667,7 +1667,7 @@ int ssmtp(char *argv[])
 	}
 
 	outbytes += smtp_write(sock,
-		"Received: by %s (sSMTP sendmail emulation); %s", hostname, arpadate);
+		"Received: by %s; %s", hostname, arpadate);
 
 	if(have_from == False) {
 		outbytes += smtp_write(sock, "From: %s", from);
